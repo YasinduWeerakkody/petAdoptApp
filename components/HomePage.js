@@ -24,11 +24,14 @@ export default function HomePage({ navigation }) {
 
   // Sample pet data
   const petData = [
-    { id: 1, name: "Buddy", category: "Dog", image: "/assets/images/adoptme.jpg", age: "2 years" , sex: "Male",},
+    { id: 1, name: "Buddy", category: "Dog", image: "/assets/images/adoptme.jpg", age: "2 years" , sex: "Male",weight:"25kg"},
     { id: 2, name: "Whiskers", category: "Cat", image: "/assets/images/cat.avif", age: "1 year" },
     { id: 3, name: "Chirpy", category: "Bird", image: "/assets/images/bird.jpg", age: "6 months" },
     { id: 4, name: "Rex", category: "Dog", image: "/assets/images/dog.jpg", age: "3 years" },
     { id: 5, name: "Mittens", category: "Cat", image: "/assets/images/cat.avif", age: "2 years" },
+    { id: 6, name: "Chirpy", category: "Bird", image: "/assets/images/bird.jpg", age: "6 months" },
+    { id: 7, name: "Rex", category: "Dog", image: "/assets/images/dog.jpg", age: "3 years" },
+    { id: 8, name: "Mittens", category: "Cat", image: "/assets/images/cat.avif", age: "2 years" },
   ];
 
   // Filter pets based on the search query and selected category
