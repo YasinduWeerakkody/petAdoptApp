@@ -8,6 +8,7 @@ import HomePage from "../components/HomePage";
 import AddPetPage from "../components/AddPetPage";
 import PetDetailsPage from "../components/PetDetailsPage";
 import ChatPage from "../components/ChatPage";
+import ProfilePage from '../components/ProfilePage';
 
 
 const Stack = createStackNavigator();
@@ -22,7 +23,8 @@ export default function App() {
         <Stack.Screen name="Home" component={HomePage} />
         <Stack.Screen name="AddPet" component={AddPetPage} />
         <Stack.Screen name="PetDetails" component={PetDetailsPage} />
-        <Stack.Screen name="Chat" component={ChatPage} />
+        <Stack.Screen name="ChatPage" component={ChatPage} />
+        <Stack.Screen name="Profile" component={ProfilePage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

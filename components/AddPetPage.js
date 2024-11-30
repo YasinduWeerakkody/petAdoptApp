@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TextInput, Button, StyleSheet, Text } from "react-native";
+import { View, TextInput, Button, StyleSheet, Text , TouchableOpacity} from "react-native";
 
 export default function AddPetPage({ navigation }) {
   const [petName, setPetName] = useState("");
@@ -8,6 +8,7 @@ export default function AddPetPage({ navigation }) {
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
   const [address, setAddress] = useState("");
+  const [about, setAbout] = useState("");
 
   const handleSubmit = () => {
     navigation.navigate("Home");
@@ -52,7 +53,20 @@ export default function AddPetPage({ navigation }) {
         value={address}
         onChangeText={setAddress}
       />
-      <Button title="Submit" onPress={handleSubmit} />
+      <TextInput
+        style={styles.input}
+        placeholder="About"
+        value={about}
+        onChangeText={setAbout}
+      />
+      {/* <Button title="Submit" onPress={handleSubmit} style={styles.button}/> */}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={handleSubmit}
+        title="Submit"
+      >
+        <Text style={styles.addButtonText}>Submit</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -61,4 +75,12 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 20 },
   title: { fontSize: 24, marginBottom: 20 },
   input: { padding: 10, borderWidth: 1, marginBottom: 10 },
+  addButtonText: { color: "#fff", fontSize: 16, fontWeight: "bold",textAlign:"center" },
+  button: {
+    backgroundColor: "#ffa500",
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 25,
+    marginBottom: 20,
+  },
 });
