@@ -174,7 +174,22 @@ export default function HomePage({ navigation }) {
       >
         <Text style={styles.addButtonText}>Add New Pet</Text>
       </TouchableOpacity>
+      
+      {/* Custom Bottom Navigation Bar */}
+      <View style={styles.navBartwo}>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")} style={styles.navButton}>
+          <Text style={styles.navButtonText}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("ChatPage")} style={styles.navButton}>
+          <Text style={styles.navButtonText}>Chat</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Profile")} style={styles.navButton}>
+          <Text style={styles.navButtonText}>Profile</Text>
+        </TouchableOpacity>
+      </View>
     </View>
+
+    
   );
 }
 
@@ -191,13 +206,12 @@ const styles = StyleSheet.create({
   profileImage: { width: 40, height: 40, borderRadius: 20 },
   slider: { marginVertical: 10 },
   sliderImage: { width: 450, height: 200, marginRight: 5, borderRadius: 10, marginLeft: 5, marginTop: 10 },
-  categoryContainer: { paddingHorizontal: 35, marginBottom: 10 , marginTop: -35},
+  categoryContainer: { paddingHorizontal: 35, marginBottom: 10 , marginTop: 10},
   sectionTitle: { fontSize: 18, fontWeight: "bold", marginBottom: 5 },
  
   searchContainer: {
     marginHorizontal: 15,
-    marginTop: 30,
-    marginBottom: 15,
+    marginTop: 10,
   },
   searchInput: {
     backgroundColor: "#f9f9f9",
@@ -252,6 +266,7 @@ const styles = StyleSheet.create({
     marginRight: 15,
     alignItems: "center",
     width: 150,
+    height:200,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -266,7 +281,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffa500",
     padding: 15,
     borderRadius: 25,
-    margin: 15,
+    marginBottom: 90,
+    marginLeft:10,
+    marginRight:10,
     alignItems: "center",
   },
   addButtonText: { color: "#fff", fontSize: 16, fontWeight: "bold" },
@@ -282,6 +299,23 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 3,
+  },
+  navBartwo: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    backgroundColor: "#fff",
+    borderTopWidth: 1,
+    borderColor: "#ddd",
+    paddingVertical: 10,
+    marginTop:-80,
+  },
+  navButton: {
+    alignItems: "center",
+  },
+  navButtonText: {
+    fontSize: 14,
+    color: "#ffa500",
+    fontWeight: "bold",
   },
   
 });

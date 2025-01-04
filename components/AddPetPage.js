@@ -67,7 +67,20 @@ export default function AddPetPage({ navigation }) {
       >
         <Text style={styles.addButtonText}>Submit</Text>
       </TouchableOpacity>
+      {/* Custom Bottom Navigation Bar */}
+      <View style={styles.navBartwo}>
+        <TouchableOpacity onPress={() => navigation.navigate("Home")} style={styles.navButton}>
+          <Text style={styles.navButtonText}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("ChatPage")} style={styles.navButton}>
+          <Text style={styles.navButtonText}>Chat</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Profile")} style={styles.navButton}>
+          <Text style={styles.navButtonText}>Profile</Text>
+        </TouchableOpacity>
+      </View>
     </View>
+    
   );
 }
 
@@ -83,4 +96,23 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginBottom: 20,
   },
+
+  navBartwo: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    backgroundColor: "#fff",
+    borderTopWidth: 1,
+    borderColor: "#ddd",
+    paddingVertical: 10,
+    marginTop:280,
+  },
+  navButton: {
+    alignItems: "center",
+  },
+  navButtonText: {
+    fontSize: 14,
+    color: "#ffa500",
+    fontWeight: "bold",
+  },
+  
 });
